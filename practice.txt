@@ -1,0 +1,14 @@
+#!/bin/bash
+
+user_age=25 #variables age is 25
+if [ "$user_age" -ge 18 ]; then 		#if statement saying if the user is -ge 18
+	echo "You are an adult." 		#if true prints 18
+else 						#if false or user -le 18
+	echo "You are not an adult."		#if false prints you are not an adult.
+fi
+
+TIMESTAMP=$(DATE =%Y%m%d%H%M%S)
+BACKUP_DIR="/path/to/backups"
+SOURCE_DIR="/path/to/source"
+
+tar czf "$BACKUP_DIR/file_backup_$TIMESTAMP.tar.gz" "$SOURCE_DIR" 
